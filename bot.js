@@ -14,15 +14,4 @@ var channel = "503686842206650383";
     },305);
 })
 
-client.on('message',function(message) {
-    let prefix = ""; //بريفيكسك
-let args = message.content.split(" ").slice(1).join(" ");
-if(message.content.startsWith(prefix + "say")) {
-  if (message.author.id !== '321463690815602689') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
-  if(!message.author.id === '321463690815602689') return;
-if(!args) return;
-message.channel.send(`${args}`);
-}
-});
-
 client.login(process.env.BOT_TOKEN); 
